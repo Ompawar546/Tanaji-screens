@@ -1,0 +1,325 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{% static 'website/css/about.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="about-hero">
+  <div class="container">
+    <h1>About <span>Tanaji Screen Pvt. Ltd.</span></h1>
+    <p>Crafting Excellence in Screen Printing & Laser Engraving Since 1996</p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <h3>26+</h3>
+        <p>Years of Excellence</p>
+      </div>
+      <div class="stat-item">
+        <h3>ISO 9001:2015</h3>
+        <p>Certified Quality</p>
+      </div>
+      <div class="stat-item">
+        <h3>5+</h3>
+        <p>Countries Served</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider-simple"></div>
+
+<!-- WHO WE ARE -->
+<section class="about-card">
+  <div class="container">
+    <h2>Who We Are</h2>
+    <p>
+      <b>Tanaji Screen Pvt. Ltd.</b> is a trusted leader in screen printing and laser engraving.
+      Located in Additional MIDC Satara, Maharashtra, we have proudly served the industry
+      for over <b>26 years</b> since 1996.
+    </p>
+    <p>
+      Our state-of-the-art manufacturing facility blends craftsmanship with modern
+      technology. We serve clients across India and globally in China, Dubai, Thailand
+      and Spain, delivering solutions that help our partners sharpen their competitive edge.
+    </p>
+    <p>
+      Founded by <b>Mr. Tanaji Mohite</b>, our organization has evolved to a systemic working 
+      approach with global-class Quality Assurance norms. We are committed to manufacturing 
+      and supplying the best quality products by continually improving the effectiveness of 
+      our quality management systems.
+    </p>
+  </div>
+</section>
+
+
+
+
+<!-- MISSION & VISION -->
+<section class="mission-vision">
+  <div class="container">
+    <div class="mv-grid">
+      <div class="mv-card">
+        <div class="mv-icon">🎯</div>
+        <h3>Our Mission</h3>
+        <p>To optimize technology coupled with global-class QA norms for our partnership with clients. We endeavor to help our client-partners achieve the best results that will help them sharpen their competitive edge.</p>
+      </div>
+      <div class="mv-card">
+        <div class="mv-icon">🔭</div>
+        <h3>Our Vision</h3>
+        <p>To be the preferred partner in screen printing and laser engraving solutions, recognized for innovation, quality, and customer satisfaction across global markets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- SERVICES -->
+<section class="about-services">
+  <div class="container">
+    <h2>Our Core Services</h2>
+    <div class="grid">
+      <div class="service-card" onclick="openPopup('screen')">
+        <div class="service-icon">🖨️</div>
+        <h3>Screen Printing</h3>
+        <ul>
+          <li>PCB Keypads</li>
+          <li>Flexible Keypads</li>
+          <li>Membrane Overlays</li>
+          <li>Custom Graphics</li>
+        </ul>
+        <span class="learn-more">Learn More →</span>
+      </div>
+
+      <div class="service-card" onclick="openPopup('laser')">
+        <div class="service-icon">⚡</div>
+        <h3>Laser Engraving</h3>
+        <ul>
+          <li>Acrylic Engraving</li>
+          <li>Metal Etching</li>
+          <li>Precision Cutting</li>
+          <li>Custom Designs</li>
+        </ul>
+        <span class="learn-more">Learn More →</span>
+      </div>
+
+      <div class="service-card" onclick="openPopup('labels')">
+        <div class="service-icon">🏷️</div>
+        <h3>Specialized Labels</h3>
+        <ul>
+          <li>Traffolyte Labels</li>
+          <li>Industrial Stickers</li>
+          <li>Name Plates</li>
+          <li>Automotive Dials</li>
+        </ul>
+        <span class="learn-more">Learn More →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- PRODUCTS -->
+<section class="products-section">
+  <div class="container">
+    <h2>Product Range</h2>
+    <div class="products-grid">
+      <div class="product-item">
+        <h4>Membrane Keypads</h4>
+        <p>The most widely used form of switch technology offering reliability, long life, and design flexibility.</p>
+      </div>
+      <div class="product-item">
+        <h4>Flexible Circuits</h4>
+        <p>Ideal for applications requiring flexibility, space savings, and superior performance.</p>
+      </div>
+      <div class="product-item">
+        <h4>Automotive Dials</h4>
+        <p>High-precision dials with up to 12 colors in close tolerance and perfect registration.</p>
+      </div>
+      <div class="product-item">
+        <h4>Graphic Overlays</h4>
+        <p>Durable overlays with high-resolution graphics, protecting against moisture ingress.</p>
+      </div>
+      <div class="product-item">
+        <h4>Industrial Labels</h4>
+        <p>Custom labels designed for harsh industrial environments with long, durable lifespan.</p>
+      </div>
+      <div class="product-item">
+        <h4>3D Domed Labels</h4>
+        <p>Premium labels with dimensional effect for enhanced brand presentation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- QUALITY -->
+<section class="about-quality">
+  <div class="container">
+    <div class="quality-box">
+      <div class="iso-badge">
+        <div class="badge-content">
+          <span class="badge-title">ISO 9001:2015</span>
+          <span class="badge-subtitle">Certified</span>
+        </div>
+      </div>
+      <div class="quality-content">
+        <h3>Quality Assurance</h3>
+        <p>
+          We follow <b>ISO 9001:2015</b> standards with 5S culture and Quality Circle practices 
+          to ensure zero-defect manufacturing. Our dedicated quality assurance process and 
+          infallible quality control measures guarantee that every product meets the highest 
+          standards of excellence.
+        </p>
+        <p>
+          Our exceptional customer service and systematic working approach have earned us 
+          total customer satisfaction and long-term partnerships with clients across diverse industries.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- WHY CHOOSE -->
+<section class="about-why">
+  <div class="container">
+    <h2>Why Choose Us</h2>
+    <div class="grid">
+      <div class="why-card" onclick="openPopup('precision')">
+        <div class="why-icon">🎯</div>
+        <h4>Precision & Accuracy</h4>
+        <p>State-of-the-art MIDC Satara facility with avant-garde machinery</p>
+      </div>
+
+      <div class="why-card" onclick="openPopup('global')">
+        <div class="why-icon">🌍</div>
+        <h4>Global Reach</h4>
+        <p>Serving clients across India, China, Dubai, Thailand, and Spain</p>
+      </div>
+
+      <div class="why-card" onclick="openPopup('quality')">
+        <div class="why-icon">🛡️</div>
+        <h4>Quality Guarantee</h4>
+        <p>ISO 9001:2015 certified with 5S culture implementation</p>
+      </div>
+
+      <div class="why-card" onclick="openPopup('leader')">
+        <div class="why-icon">👨‍💼</div>
+        <h4>Expert Leadership</h4>
+        <p>26+ years of industry experience under Mr. Tanaji Mohite</p>
+      </div>
+
+      <div class="why-card" onclick="openPopup('tech')">
+        <div class="why-icon">⚙️</div>
+        <h4>Advanced Technology</h4>
+        <p>Modern equipment and innovative manufacturing processes</p>
+      </div>
+
+      <div class="why-card" onclick="openPopup('custom')">
+        <div class="why-icon">🔧</div>
+        <h4>Customized Solutions</h4>
+        <p>Tailored products meeting exact client specifications</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- INFRASTRUCTURE -->
+<section class="infrastructure">
+  <div class="container">
+    <h2>Our Infrastructure</h2>
+    <div class="infra-content">
+      <p>
+        Our state-of-the-art manufacturing unit in Additional MIDC, Satara is supported by 
+        modern infrastructural facilities. The production process is facilitated by a range of 
+        avant-garde machinery and equipment, enabling us to deliver consistent quality and 
+        meet demanding production schedules.
+      </p>
+      <p>
+        We have an efficient supply chain in place that facilitates seamless transportation 
+        of our products to clients. Our facility is designed to handle diverse production 
+        requirements, from small custom orders to large-scale manufacturing projects.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+  <div class="popup-box">
+    <span class="close" onclick="closePopup()">×</span>
+    <h3 id="popup-title"></h3>
+    <p id="popup-text"></p>
+  </div>
+</div>
+
+<script>
+const data = {
+  screen: {
+    title: "Screen Printing Services",
+    text: "High-precision screen printing for PCB keypads, membrane overlays, and graphic designs. Our advanced techniques ensure perfect registration and excellent print definition with up to 12 colors in close tolerance."
+  },
+  laser: {
+    title: "Laser Engraving & Marking",
+    text: "Professional laser engraving services on metal, acrylic, wood, and various materials. Our laser marking capabilities include color change, charring, foaming, melting, and precision ablation for diverse industrial applications."
+  },
+  labels: {
+    title: "Specialized Labels & Stickers",
+    text: "Custom industrial labels, traffolyte engraved labels, 3D domed labels, and illuminated labels. Designed for harsh environments with long-lasting durability and resistance to extreme weather conditions."
+  },
+  precision: {
+    title: "Precision & Accuracy",
+    text: "Our modern MIDC Satara facility is equipped with state-of-the-art machinery and advanced technology, ensuring precise manufacturing with consistent quality in every product."
+  },
+  global: {
+    title: "Global Market Presence",
+    text: "We proudly serve clients across India and international markets including China, Dubai, Thailand, and Spain, delivering world-class products and services worldwide."
+  },
+  quality: {
+    title: "Quality Assurance",
+    text: "ISO 9001:2015 certified quality management system with 5S culture and Quality Circle practices. We are committed to zero-defect manufacturing and continuous improvement."
+  },
+  leader: {
+    title: "Expert Leadership",
+    text: "Founded and led by Mr. Tanaji Mohite with over 26 years of industry experience. Our leadership brings deep expertise and commitment to excellence in every project."
+  },
+  tech: {
+    title: "Advanced Technology",
+    text: "We invest in cutting-edge machinery and equipment to optimize production efficiency and product quality. Our technology infrastructure supports both traditional craftsmanship and modern automation."
+  },
+  custom: {
+    title: "Customized Manufacturing",
+    text: "Every product is customized to meet exact client specifications. From design to delivery, we work closely with clients to ensure their unique requirements are perfectly fulfilled."
+  }
+};
+
+function openPopup(key) {
+  document.getElementById("popup").style.display = "flex";
+  document.getElementById("popup-title").innerText = data[key].title;
+  document.getElementById("popup-text").innerText = data[key].text;
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+
+// Close popup when clicking outside
+document.getElementById("popup").addEventListener("click", function(e) {
+  if (e.target === this) {
+    closePopup();
+  }
+});
+</script>
+
+{% endblock %}

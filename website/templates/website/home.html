@@ -1,0 +1,246 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{% static 'website/css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div id="mainCarousel"
+     class="carousel slide carousel-fade"
+     data-bs-ride="carousel"
+     data-bs-interval="4000">
+
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <img src="{% static 'website/images/slide1.jpeg' %}"
+           class="d-block w-100 carousel-img">
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <img src="{% static 'website/images/slide2.jpeg' %}"
+           class="d-block w-100 carousel-img">
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <img src="{% static 'website/images/slide3.jpeg' %}"
+           class="d-block w-100 carousel-img">
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="carousel-item">
+      <img src="{% static 'website/images/slide4.jpeg' %}"
+           class="d-block w-100 carousel-img">
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button"
+          data-bs-target="#mainCarousel"
+          data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <button class="carousel-control-next" type="button"
+          data-bs-target="#mainCarousel"
+          data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+</div>
+
+<div class="section-divider-simple"></div>
+
+<!-- WHY CHOOSE US -->
+<section class="why-section">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      Leading Innovation in Precision Manufacturing
+    </h2>
+
+    <p class="section-subtitle">
+      Excellence in Membrane Switches, Keypads & Industrial Labels with Global Quality Standards
+    </p>
+
+    <div class="why-grid">
+
+      <div class="why-card highlight">
+        <h4>ISO 9001:2015 Certified</h4>
+        <p>
+          Global quality standards compliance with rigorous quality management systems.
+        </p>
+      </div>
+
+      <div class="why-card highlight">
+        <h4>20+ Years Experience</h4>
+        <p>
+          Two decades of trusted industry expertise in membrane switch technology.
+        </p>
+      </div>
+
+      <div class="why-card highlight">
+        <h4>State-of-Art Facility</h4>
+        <p>
+          Modern manufacturing unit in Satara MIDC, Maharashtra with advanced infrastructure.
+        </p>
+      </div>
+
+      <div class="why-card highlight">
+        <h4>Advanced Technology</h4>
+        <p>
+          Cutting-edge laser engraving, screen printing & membrane switch machinery.
+        </p>
+      </div>
+
+      <div class="why-card highlight">
+        <h4>Custom Solutions</h4>
+        <p>
+          Tailored manufacturing for automotive, industrial & electronic applications.
+        </p>
+      </div>
+
+      <div class="why-card highlight">
+        <h4>Quality Assurance</h4>
+        <p>
+          5S culture and Quality Circle practices ensuring zero-defect manufacturing.
+        </p>
+      </div>
+
+      <div class="why-card highlight">
+        <h4>Global Standards</h4>
+        <p>
+          International quality norms compliance serving diverse industry segments.
+        </p>
+      </div>
+
+      <div class="why-card highlight">
+        <h4>Customer Partnership</h4>
+        <p>
+          Long-term strategic partnerships with complete customer satisfaction focus.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<div class="section-divider">
+    <div class="section-divider-icon"></div>
+</div>
+
+
+<!-- MILESTONES SECTION -->
+<section class="milestone-section">
+
+  <div class="container">
+
+    <h2 class="milestone-title">Our Manufacturing Milestones</h2>
+    <p class="milestone-subtitle">
+      Building trust through precision engineering & unwavering quality standards
+    </p>
+
+    <div class="milestone-grid">
+
+      <div class="milestone-card">
+        <h3>20+</h3>
+        <p>Years of Excellence</p>
+      </div>
+
+      <div class="milestone-card">
+        <h3>500+</h3>
+        <p>Global Clients Served</p>
+      </div>
+
+      <div class="milestone-card">
+        <h3>1000+</h3>
+        <p>Quality Products Delivered</p>
+      </div>
+
+      <div class="milestone-card">
+        <h3>ISO</h3>
+        <p>9001:2015 Certified</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<div class="section-divider">
+    <div class="section-divider-icon"></div>
+</div>
+
+
+<!-- CLIENTS SECTION -->
+<section class="clients-section">
+
+  <div class="container">
+
+    <h2 class="clients-title">Trusted by Industry Leaders</h2>
+    <p class="clients-subtitle">Over 20 Years of Client Partnerships</p>
+
+    <div class="clients-slider-wrapper">
+      <div class="clients-slider">
+        <div class="clients-track">
+
+          <!-- Client logos -->
+          <div class="client-logo">
+            <img src="{% static 'website/images/client1.jpg' %}" alt="Client Logo">
+          </div>
+          <div class="client-logo">
+            <img src="{% static 'website/images/client2.jpg' %}" alt="Client Logo">
+          </div>
+          <div class="client-logo">
+            <img src="{% static 'website/images/client3.jpg' %}" alt="Client Logo">
+          </div>
+          <div class="client-logo">
+            <img src="{% static 'website/images/client4.jpg' %}" alt="Client Logo">
+          </div>
+          <div class="client-logo">
+            <img src="{% static 'website/images/client5.jpg' %}" alt="Client Logo">
+          </div>
+          <div class="client-logo">
+            <img src="{% static 'website/images/client6.jpg' %}" alt="Client Logo">
+          </div>
+
+          <!-- Duplicate for smooth loop -->
+          <div class="client-logo">
+            <img src="{% static 'website/images/client1.jpg' %}" alt="Client Logo">
+          </div>
+          <div class="client-logo">
+            <img src="{% static 'website/images/client2.jpg' %}" alt="Client Logo">
+          </div>
+          <div class="client-logo">
+            <img src="{% static 'website/images/client3.jpg' %}" alt="Client Logo">
+          </div>
+          <div class="client-logo">
+            <img src="{% static 'website/images/client4.jpg' %}" alt="Client Logo">
+          </div>
+          <div class="client-logo">
+            <img src="{% static 'website/images/client5.jpg' %}" alt="Client Logo">
+          </div>
+          <div class="client-logo">
+            <img src="{% static 'website/images/client6.jpg' %}" alt="Client Logo">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+{% endblock %}

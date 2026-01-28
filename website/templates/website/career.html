@@ -1,0 +1,114 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{% static 'website/css/career.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="career-page">
+
+<div class="career-container">
+
+<div class="career-hero">
+    <h2>Join Our Team</h2>
+    <p>Take the next step in your career with us</p>
+</div>
+
+<div class="career-card">
+
+{% if success %}
+<div class="success-box">
+    <svg class="success-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <h3>Application Submitted Successfully!</h3>
+    <p>Thank you for your interest in joining our team. We have received your application and will review it carefully. Our HR team will contact you within 3-5 business days.</p>
+    <a href="{% url 'career' %}" class="btn-secondary">Submit Another Application</a>
+</div>
+{% else %}
+
+<div class="form-header">
+    <h3>Application Form</h3>
+    <p>Please fill in all the required fields to submit your application</p>
+</div>
+
+<form method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+
+<div class="form-section">
+    <h4>Personal Information</h4>
+    
+    <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input id="name" name="name" type="text" required placeholder="Enter your full name">
+    </div>
+
+    <div class="form-grid">
+        <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input id="email" name="email" type="email" required placeholder="your.email@example.com">
+        </div>
+        <div class="form-group">
+            <label for="contact">Contact Number *</label>
+            <input id="contact" name="contact" type="tel" required placeholder="+91 XXXXX XXXXX">
+        </div>
+    </div>
+
+    <div class="form-grid">
+        <div class="form-group">
+            <label for="age">Age *</label>
+            <input id="age" name="age" type="number" min="18" max="65" required placeholder="Enter your age">
+        </div>
+        <div class="form-group">
+            <label for="qualification">Highest Qualification *</label>
+            <input id="qualification" name="qualification" type="text" required placeholder="e.g., Bachelor's in Engineering">
+        </div>
+    </div>
+</div>
+
+<div class="form-section">
+    <h4>Position Details</h4>
+    
+    <div class="form-group">
+        <label for="role">Position Applied For *</label>
+        <select id="role" name="role" required>
+            <option value="">Select a position</option>
+            <option value="printing_specialist">Printing Specialist</option>
+            <option value="electrical_engineer">Electrical Engineer</option>
+            <option value="mechanical_engineer">Mechanical Engineer</option>
+            <option value="sales_executive">Sales Executive</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="expected_salary">Expected Salary (Annual CTC) *</label>
+        <input id="expected_salary" name="expected_salary" type="text" required placeholder="e.g., ₹5,00,000">
+    </div>
+</div>
+
+<div class="form-section">
+    <h4>Professional Background</h4>
+    
+    <div class="form-group">
+        <label for="experience">Work Experience *</label>
+        <textarea id="experience" name="experience" rows="5" required placeholder="Please describe your relevant work experience, key responsibilities, and achievements..."></textarea>
+    </div>
+</div>
+
+<div class="form-actions">
+    <button type="submit" class="btn-primary">Submit Application</button>
+</div>
+
+</form>
+{% endif %}
+
+</div>
+
+</div>
+</section>
+
+{% endblock %}
