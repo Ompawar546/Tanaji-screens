@@ -1,0 +1,20 @@
+{% extends "website/base.html" %}
+
+{% block content %}
+<section style="max-width:600px;margin:100px auto;">
+    <h2>Add Product Category</h2>
+
+    {% if success %}
+        <p style="color:green;">Category added successfully ✔</p>
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit" class="admin-btn">
+            Add Category
+        </button>
+    </form>
+</section>
+{% endblock %}

@@ -1,0 +1,83 @@
+/* ================= PRODUCT DETAIL PAGE ================= */
+
+.product-detail-page {
+    padding: 90px 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.product-detail {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    align-items: center;
+}
+
+/* Image */
+.product-detail img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Info */
+.product-info h1 {
+    font-size: 36px;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+
+.product-info .category {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.product-info .description {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+/* Enquire Button */
+.enquire-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #F4B41A;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.enquire-btn:hover {
+    background: #e6a917;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(244,180,26,0.3);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 992px) {
+    .product-detail {
+        grid-template-columns: 1fr;
+    }
+
+    .product-info h1 {
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 576px) {
+    .product-detail-page {
+        padding: 60px 15px;
+    }
+
+    .product-info h1 {
+        font-size: 24px;
+    }
+}

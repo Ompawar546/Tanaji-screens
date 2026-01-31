@@ -88,3 +88,30 @@ h1, h2, h3, h4, h5{
     font-size:13px;
     color:#aaa;
 }
+
+
+/* ADMIN BUTTON */
+
+.admin-btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: #F4B41A;
+    color: #111 !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.admin-btn:hover {
+    background: #e6a917;
+}
+
+.admin-btn.logout {
+    background: transparent;
+    border: 2px solid #F4B41A;
+    color: #F4B41A !important;
+}
+
+.admin-btn.logout:hover {
+    background: #F4B41A;
+    color: #111 !important;
+}

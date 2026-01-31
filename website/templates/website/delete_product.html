@@ -1,0 +1,23 @@
+{% extends "website/base.html" %}
+
+{% block content %}
+<section style="max-width:500px;margin:100px auto;text-align:center;">
+    <h3>Delete Product</h3>
+
+    <p>
+        Are you sure you want to delete<br>
+        <strong>{{ product.name }}</strong>?
+    </p>
+
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" class="admin-btn logout">
+            Yes, Delete
+        </button>
+
+        <a href="{% url 'admin_products' %}" style="margin-left:15px;">
+            Cancel
+        </a>
+    </form>
+</section>
+{% endblock %}

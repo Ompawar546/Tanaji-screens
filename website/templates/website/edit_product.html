@@ -1,0 +1,20 @@
+{% extends "website/base.html" %}
+
+{% block content %}
+<section style="max-width:600px;margin:80px auto;">
+    <h2>Edit Product</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit" class="admin-btn">
+            Update Product
+        </button>
+
+        <a href="{% url 'admin_products' %}" style="margin-left:10px;">
+            Cancel
+        </a>
+    </form>
+</section>
+{% endblock %}

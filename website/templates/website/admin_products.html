@@ -1,0 +1,386 @@
+{% extends "website/base.html" %}
+
+{% block content %}
+
+<style>
+/* ================= MANAGE PRODUCTS PAGE ================= */
+
+.manage-hero {
+    padding: 60px 20px 40px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.manage-hero-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.manage-title {
+    font-size: 36px;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.manage-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+/* Section Divider */
+.section-divider-simple {
+    height: 1px;
+    background: linear-gradient(to right, 
+        transparent 0%, 
+        #e0e0e0 20%, 
+        #F4B41A 50%, 
+        #e0e0e0 80%, 
+        transparent 100%
+    );
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+/* Main Section */
+.manage-section {
+    padding: 50px 20px 80px;
+    background: #ffffff;
+}
+
+.manage-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Action Bar */
+.action-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.action-bar h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.add-product-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: #F4B41A;
+    color: #1a1a1a;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #F4B41A;
+}
+
+.add-product-btn:hover {
+    background: #e6a917;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(244, 180, 26, 0.25);
+}
+
+/* Table Container */
+.table-container {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 2px solid #e8e8e8;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Table Styles */
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+.products-table thead {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-bottom: 2px solid #F4B41A;
+}
+
+.products-table th {
+    padding: 18px 20px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.products-table tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.2s ease;
+}
+
+.products-table tbody tr:hover {
+    background: #fffbf0;
+}
+
+.products-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.products-table td {
+    padding: 18px 20px;
+    font-size: 14px;
+    color: #444;
+}
+
+.products-table td:first-child {
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+/* Action Buttons */
+.action-links {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.edit-btn {
+    color: #1a1a1a;
+    background: #fff9e6;
+    border-color: #F4B41A;
+}
+
+.edit-btn:hover {
+    background: #F4B41A;
+    transform: translateY(-1px);
+}
+
+.delete-btn {
+    color: #dc3545;
+    background: #fff5f5;
+    border-color: #dc3545;
+}
+
+.delete-btn:hover {
+    background: #dc3545;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.empty-state-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+    opacity: 0.3;
+}
+
+.empty-state h3 {
+    font-size: 22px;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Product Count Badge */
+.product-count {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #F4B41A;
+    color: #1a1a1a;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+@media (max-width: 992px) {
+    .manage-hero {
+        padding: 50px 20px 30px;
+    }
+
+    .manage-title {
+        font-size: 30px;
+    }
+
+    .manage-section {
+        padding: 40px 15px 60px;
+    }
+
+    .action-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .products-table th,
+    .products-table td {
+        padding: 14px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .manage-title {
+        font-size: 26px;
+    }
+
+    .manage-subtitle {
+        font-size: 15px;
+    }
+
+    /* Stack table on mobile */
+    .table-container {
+        overflow-x: auto;
+    }
+
+    .products-table {
+        min-width: 600px;
+    }
+
+    .action-links {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    .action-btn {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .manage-hero {
+        padding: 40px 15px 25px;
+    }
+
+    .manage-title {
+        font-size: 22px;
+    }
+
+    .manage-section {
+        padding: 30px 10px 50px;
+    }
+
+    .add-product-btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    .products-table th,
+    .products-table td {
+        padding: 12px 14px;
+        font-size: 13px;
+    }
+}
+</style>
+
+<!-- Hero Section -->
+<section class="manage-hero">
+    <div class="manage-hero-content">
+        <h1 class="manage-title">Manage Products</h1>
+        <p class="manage-subtitle">View, edit and organize your product catalog</p>
+    </div>
+</section>
+
+<div class="section-divider-simple"></div>
+
+<!-- Main Section -->
+<section class="manage-section">
+    <div class="manage-container">
+        
+        <!-- Action Bar -->
+        <div class="action-bar">
+            <h2>
+                All Products 
+                <span class="product-count">{{ products|length }}</span>
+            </h2>
+            <a href="{% url 'add_product' %}" class="add-product-btn">
+                ➕ Add New Product
+            </a>
+        </div>
+
+        <!-- Products Table -->
+        <div class="table-container">
+            <table class="products-table">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Category</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for product in products %}
+                    <tr>
+                        <td>{{ product.name }}</td>
+                        <td>{{ product.category.name }}</td>
+                        <td>
+                            <div class="action-links">
+                                <a href="{% url 'edit_product' product.id %}" class="action-btn edit-btn">
+                                    ✏️ Edit
+                                </a>
+                                <a href="{% url 'delete_product' product.id %}" class="action-btn delete-btn">
+                                    🗑️ Delete
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="3">
+                            <div class="empty-state">
+                                <div class="empty-state-icon">📦</div>
+                                <h3>No Products Found</h3>
+                                <p>Start by adding your first product to the catalog</p>
+                                <a href="{% url 'add_product' %}" class="add-product-btn">
+                                    ➕ Add Your First Product
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

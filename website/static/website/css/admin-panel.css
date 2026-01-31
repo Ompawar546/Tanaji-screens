@@ -1,0 +1,441 @@
+/* ================= ADMIN HERO SECTION ================= */
+
+.admin-hero {
+    position: relative;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    text-align: center;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.admin-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.admin-hero-title {
+    font-size: 48px;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.admin-hero-subtitle {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ================= ADMIN PANEL SECTION ================= */
+
+.admin-panel {
+    padding: 80px 20px 100px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.admin-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* ================= ADMIN CARD ================= */
+
+.admin-card {
+    background: #ffffff;
+    border: 2px solid #e8e8e8;
+    border-radius: 14px;
+    padding: 35px 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.admin-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #F4B41A;
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.admin-card:hover {
+    transform: translateY(-6px);
+    border-color: #F4B41A;
+    box-shadow: 0 14px 30px rgba(244, 180, 26, 0.18);
+}
+
+.admin-card:hover::before {
+    transform: scaleY(1);
+}
+
+/* Admin Card Icon */
+.admin-card-icon {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    background: linear-gradient(135deg, #fffbf0 0%, #fff9e6 100%);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #F4B41A;
+    transition: all 0.3s ease;
+}
+
+.admin-card-icon span {
+    font-size: 32px;
+}
+
+.admin-card:hover .admin-card-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: #F4B41A;
+}
+
+/* Admin Card Content */
+.admin-card-content {
+    flex: 1;
+}
+
+.admin-card-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.admin-card-content p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Admin Card Arrow */
+.admin-card-arrow {
+    font-size: 24px;
+    color: #F4B41A;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+    opacity: 0.6;
+}
+
+.admin-card:hover .admin-card-arrow {
+    transform: translateX(6px);
+    opacity: 1;
+}
+
+/* Highlight Card (Primary Action) */
+.admin-card.highlight {
+    border-color: #F4B41A;
+    background: linear-gradient(135deg, #ffffff 0%, #fffbf0 100%);
+}
+
+.admin-card.highlight::before {
+    transform: scaleY(1);
+}
+
+/* Logout Card (Danger Action) */
+.admin-card.logout-card {
+    border-color: #e8e8e8;
+}
+
+.admin-card.logout-card:hover {
+    border-color: #dc3545;
+    box-shadow: 0 14px 30px rgba(220, 53, 69, 0.15);
+}
+
+.admin-card.logout-card::before {
+    background: #dc3545;
+}
+
+.admin-card.logout-card:hover .admin-card-icon {
+    background: #dc3545;
+    border-color: #dc3545;
+}
+
+.admin-card.logout-card .admin-card-arrow {
+    color: #dc3545;
+}
+
+/* ================= ADMIN STATS SECTION ================= */
+
+.admin-stats {
+    padding: 80px 20px 100px;
+    background: #ffffff;
+}
+
+.stats-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 50px;
+    letter-spacing: -0.5px;
+}
+
+.stats-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.stat-card {
+    background: #ffffff;
+    padding: 40px 20px;
+    border-radius: 14px;
+    text-align: center;
+    border: 2px solid #eaeaea;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+    border-color: #F4B41A;
+    box-shadow: 0 10px 25px rgba(244, 180, 26, 0.15);
+}
+
+.stat-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.stat-card h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #F4B41A;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 15px;
+    color: #666;
+    margin: 0;
+}
+
+/* ================= SECTION DIVIDER ================= */
+
+.section-divider-simple {
+    height: 1px;
+    background: linear-gradient(to right, 
+        transparent 0%, 
+        #e0e0e0 20%, 
+        #F4B41A 50%, 
+        #e0e0e0 80%, 
+        transparent 100%
+    );
+    margin: 60px auto;
+    max-width: 80%;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Large Tablets */
+@media (max-width: 1200px) {
+    .admin-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .admin-hero {
+        padding: 80px 20px;
+    }
+
+    .admin-hero-title {
+        font-size: 38px;
+    }
+
+    .admin-hero-subtitle {
+        font-size: 16px;
+    }
+
+    .admin-panel {
+        padding: 60px 20px 80px;
+    }
+
+    .admin-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 25px;
+    }
+
+    .admin-card {
+        padding: 30px 25px;
+    }
+
+    .admin-card-icon {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+    }
+
+    .admin-card-icon span {
+        font-size: 28px;
+    }
+
+    .admin-stats {
+        padding: 60px 20px 80px;
+    }
+
+    .stats-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .admin-hero {
+        padding: 60px 15px;
+    }
+
+    .admin-hero-title {
+        font-size: 28px;
+    }
+
+    .admin-hero-subtitle {
+        font-size: 15px;
+    }
+
+    .admin-panel {
+        padding: 50px 15px 60px;
+    }
+
+    .admin-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .admin-card {
+        padding: 25px 20px;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .admin-card-icon {
+        width: 55px;
+        height: 55px;
+        min-width: 55px;
+    }
+
+    .admin-card-icon span {
+        font-size: 26px;
+    }
+
+    .admin-card-content h3 {
+        font-size: 18px;
+    }
+
+    .admin-card-content p {
+        font-size: 13px;
+    }
+
+    .admin-card-arrow {
+        font-size: 20px;
+    }
+
+    .admin-stats {
+        padding: 50px 15px 60px;
+    }
+
+    .stats-title {
+        font-size: 26px;
+        margin-bottom: 35px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .stat-card {
+        padding: 35px 20px;
+    }
+
+    .stat-icon {
+        font-size: 36px;
+        margin-bottom: 12px;
+    }
+
+    .stat-card h3 {
+        font-size: 32px;
+    }
+
+    .stat-card p {
+        font-size: 14px;
+    }
+
+    .section-divider-simple {
+        margin: 40px auto;
+    }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 375px) {
+    .admin-hero-title {
+        font-size: 24px;
+    }
+
+    .admin-card {
+        padding: 20px 15px;
+    }
+
+    .admin-card-icon {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+    }
+
+    .admin-card-icon span {
+        font-size: 24px;
+    }
+
+    .admin-card-content h3 {
+        font-size: 16px;
+    }
+
+    .admin-card-content p {
+        font-size: 12px;
+    }
+}
+
+/* ================= ACCESSIBILITY ================= */
+
+.admin-card:focus {
+    outline: 3px solid #F4B41A;
+    outline-offset: 2px;
+}
+
+.admin-card:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Prevent text selection on interactive elements */
+.admin-card-icon,
+.admin-card-arrow {
+    user-select: none;
+}

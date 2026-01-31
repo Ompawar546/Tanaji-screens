@@ -129,3 +129,7 @@ EMAIL_USE_TLS = True
 
 EMAIL_HOST_USER = 'tanaji.screens@gmail.com'   # your email
 EMAIL_HOST_PASSWORD = 'YOUR_APP_PASSWORD'      # app password
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'

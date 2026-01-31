@@ -1,5 +1,5 @@
+/* ================= MAIN NAVBAR ================= */
 
-/* MAIN NAVBAR */
 .custom-navbar{
     background: #F4B41A;
     padding: 10px 20px;
@@ -8,28 +8,35 @@
     z-index: 1000;
 }
 
-/* container */
+/* ================= CONTAINER ================= */
+
 .nav-container{
     width: 100%;
-    padding: 5px 15px;   /* small safe padding */
+    padding: 5px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* ================= LOGO ================= */
 
-/* logo */
 .logo img{
     height: 40px;
 }
 
-/* menu */
+/* ================= NAV LINKS ================= */
+
 .nav-links{
     list-style: none;
     display: flex;
     gap: 25px;
     margin: 0;
     padding: 0;
+    align-items: center;
+}
+
+.nav-links li{
+    position: relative;
 }
 
 .nav-links li a{
@@ -37,20 +44,91 @@
     color: #000;
     font-size: 18px;
     font-weight: 500;
+    transition: color 0.2s ease;
 }
 
 .nav-links li a:hover{
     color: #fff;
 }
 
-/* mobile icon */
+/* ================= ADMIN DROPDOWN ================= */
+
+.admin-dropdown{
+    position: relative;
+}
+
+/* Admin button */
+.admin-trigger{
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: #F4B41A;
+    color: #000;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.admin-trigger:hover{
+    background: #e6a917;
+}
+
+/* Dropdown menu */
+.admin-menu{
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    list-style: none;
+    padding: 8px 0;
+    min-width: 160px;
+    display: none;
+    z-index: 999;
+}
+
+.admin-menu li a{
+    display: block;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #111;
+    transition: background 0.2s ease;
+}
+
+.admin-menu li a:hover{
+    background: #fffbf0;
+    color: #000;
+}
+
+/* Invisible hover bridge to prevent flicker */
+.admin-dropdown::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    height: 10px;
+}
+
+
+/* Show dropdown on hover (desktop) */
+/* Show dropdown when active (click-based) */
+.admin-dropdown.active .admin-menu{
+    display: block;
+}
+
+
+/* ================= MOBILE MENU ================= */
+
 .menu-toggle{
     display: none;
     font-size: 24px;
     cursor: pointer;
 }
 
-/* MOBILE VIEW */
+/* ================= MOBILE VIEW ================= */
+
 @media(max-width:768px){
 
     .menu-toggle{
@@ -79,5 +157,23 @@
 
     .nav-links li{
         margin: 10px 0;
+    }
+
+    /* Mobile admin dropdown */
+    .admin-menu{
+        position: static;
+        box-shadow: none;
+        background: transparent;
+        display: none;
+        padding: 0;
+    }
+
+    .admin-dropdown.active .admin-menu{
+        display: block;
+    }
+
+    .admin-menu li a{
+        padding: 10px;
+        font-size: 16px;
     }
 }

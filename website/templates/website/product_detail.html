@@ -1,0 +1,110 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{% static 'website/css/product-details.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- Product Detail Hero -->
+<section class="product-detail-hero">
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="{% url 'home' %}">Home</a>
+            <span class="separator">/</span>
+            <a href="{% url 'products' %}">Products</a>
+            <span class="separator">/</span>
+            <span class="current">{{ product.name }}</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Product Detail Section -->
+<section class="product-detail-section">
+    <div class="container">
+        
+        <div class="product-detail-grid">
+            
+            <!-- Product Image -->
+            <div class="product-image-container">
+                <div class="product-image-wrapper">
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-image">
+                </div>
+            </div>
+
+            <!-- Product Information -->
+            <div class="product-info-container">
+                
+                <div class="product-header">
+                    <h1 class="product-title">{{ product.name }}</h1>
+                    
+                    <div class="product-category">
+                        <span class="category-label">Category:</span>
+                        <span class="category-value">{{ product.category.name }}</span>
+                    </div>
+                </div>
+
+                <div class="product-description">
+                    <h3>Product Description</h3>
+                    <p>{{ product.description }}</p>
+                </div>
+
+                {% if product.specifications %}
+                <div class="product-specifications">
+                    <h3>Specifications</h3>
+                    <p>{{ product.specifications }}</p>
+                </div>
+                {% endif %}
+
+                <div class="product-actions">
+                    <a href="{% url 'contact' %}" class="enquire-btn">
+                        <span class="btn-icon">✉</span>
+                        Enquire Now
+                    </a>
+                    <a href="{% url 'products' %}" class="back-btn">
+                        ← Back to Products
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Quality Assurance Banner -->
+<section class="quality-assurance">
+    <div class="container">
+        <div class="quality-grid">
+            
+            <div class="quality-item">
+                <div class="quality-icon">✓</div>
+                <h4>ISO Certified</h4>
+                <p>Quality standards compliance</p>
+            </div>
+
+            <div class="quality-item">
+                <div class="quality-icon">⚙</div>
+                <h4>Custom Solutions</h4>
+                <p>Tailored to your needs</p>
+            </div>
+
+            <div class="quality-item">
+                <div class="quality-icon">🏭</div>
+                <h4>Advanced Manufacturing</h4>
+                <p>State-of-the-art facility</p>
+            </div>
+
+            <div class="quality-item">
+                <div class="quality-icon">🤝</div>
+                <h4>Trusted Partner</h4>
+                <p>20+ years experience</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

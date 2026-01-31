@@ -1,0 +1,138 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{% static 'website/css/admin-panel.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- Admin Hero Section -->
+<section class="admin-hero">
+  <div class="admin-hero-content">
+    <h1 class="admin-hero-title">Admin Dashboard</h1>
+    <p class="admin-hero-subtitle">Manage your products, categories & content</p>
+  </div>
+</section>
+
+<div class="section-divider-simple"></div>
+
+<!-- Admin Actions Section -->
+<section class="admin-panel">
+  <div class="container">
+    
+    <div class="admin-grid">
+      
+      <!-- Add Category Card -->
+      <a href="{% url 'add_category' %}" class="admin-card">
+        <div class="admin-card-icon">
+          <span>📂</span>
+        </div>
+        <div class="admin-card-content">
+          <h3>Add Category</h3>
+          <p>Create new product categories for better organization</p>
+        </div>
+        <div class="admin-card-arrow">→</div>
+      </a>
+
+      <!-- Add Product Card -->
+      <a href="{% url 'add_product' %}" class="admin-card highlight">
+        <div class="admin-card-icon">
+          <span>➕</span>
+        </div>
+        <div class="admin-card-content">
+          <h3>Add Product</h3>
+          <p>Add new products to your catalog with details & images</p>
+        </div>
+        <div class="admin-card-arrow">→</div>
+      </a>
+
+      <!-- View Products Card -->
+      <a href="{% url 'admin_products' %}" class="admin-card">
+        <div class="admin-card-icon">
+          <span>📦</span>
+        </div>
+        <div class="admin-card-content">
+          <h3>View Products</h3>
+          <p>Browse and manage all existing products</p>
+        </div>
+        <div class="admin-card-arrow">→</div>
+      </a>
+
+      <!-- Manage Categories Card -->
+      <div class="admin-card">
+        <div class="admin-card-icon">
+          <span>🗂️</span>
+        </div>
+        <div class="admin-card-content">
+          <h3>Manage Categories</h3>
+          <p>Edit and organize product categories</p>
+        </div>
+        <div class="admin-card-arrow">→</div>
+      </div>
+
+      <!-- Settings Card -->
+      <div class="admin-card">
+        <div class="admin-card-icon">
+          <span>⚙️</span>
+        </div>
+        <div class="admin-card-content">
+          <h3>Settings</h3>
+          <p>Configure site settings and preferences</p>
+        </div>
+        <div class="admin-card-arrow">→</div>
+      </div>
+
+      <!-- Logout Card -->
+      <a href="{% url 'admin_logout' %}" class="admin-card logout-card">
+        <div class="admin-card-icon">
+          <span>🚪</span>
+        </div>
+        <div class="admin-card-content">
+          <h3>Logout</h3>
+          <p>Securely sign out of admin panel</p>
+        </div>
+        <div class="admin-card-arrow">→</div>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Quick Stats Section -->
+<section class="admin-stats">
+  <div class="container">
+    <h2 class="stats-title">Quick Overview</h2>
+    
+    <div class="stats-grid">
+      
+      <div class="stat-card">
+        <div class="stat-icon">📊</div>
+        <h3>{{ total_products|default:"--" }}</h3>
+        <p>Total Products</p>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">📁</div>
+        <h3>{{ total_categories|default:"--" }}</h3>
+        <p>Categories</p>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">✓</div>
+        <h3>{{ active_products|default:"--" }}</h3>
+        <p>Active Items</p>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">🎯</div>
+        <h3>ISO Certified</h3>
+        <p>Quality Standard</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

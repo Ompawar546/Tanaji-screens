@@ -30,13 +30,44 @@
         </div>
 
         <ul class="nav-links" id="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="{% url 'career' %}">Career</a></li>
-            <li><a href="{% url 'contact' %}">Contact</a></li>
-        </ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'products' %}">Products</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="{% url 'career' %}">Career</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+
+        <!-- ADMIN LOGIN / LOGOUT -->
+        <!-- ADMIN DROPDOWN -->
+        <li class="admin-dropdown">
+            <a href="javascript:void(0)" class="admin-trigger">
+                Admin ▾
+            </a>
+
+            <ul class="admin-menu">
+                {% if request.user.is_authenticated and request.user.is_staff %}
+                    <li>
+                        <a href="{% url 'admin_dashboard' %}">
+                            Admin Panel
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'admin_logout' %}">
+                            Logout
+                        </a>
+                    </li>
+                {% else %}
+                    <li>
+                        <a href="{% url 'admin_login' %}">
+                            Admin Login
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </li>
+
+    </ul>
+
 
     </div>
 </nav>
@@ -52,6 +83,21 @@ const nav = document.getElementById("nav-links");
 menu.addEventListener("click", () => {
     nav.classList.toggle("active");
 });
+
+// Admin dropdown
+const adminTrigger = document.querySelector(".admin-trigger");
+const adminDropdown = document.querySelector(".admin-dropdown");
+
+if (adminTrigger) {
+    adminTrigger.addEventListener("click", (e) => {
+        e.stopPropagation();
+        adminDropdown.classList.toggle("active");
+    });
+
+    document.addEventListener("click", () => {
+        adminDropdown.classList.remove("active");
+    });
+}
 </script>
 
 
@@ -81,7 +127,7 @@ menu.addEventListener("click", () => {
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="{% url 'about' %}">About</a></li>
-        <li><a href="#">Products</a></li>
+        <li><a href="{% url 'products' %}">Products</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="{% url 'contact' %}">Contact</a></li>
       </ul>
