@@ -1,0 +1,403 @@
+.services-section {
+  padding: 80px 20px;
+  background: #ffffff;
+}
+
+/* SECTION HEADER */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #222;
+}
+
+.section-header p {
+  font-size: 16px;
+  color: #666;
+  max-width: 800px;
+  margin: 15px auto 0;
+  line-height: 1.6;
+}
+
+.underline {
+  width: 60px;
+  height: 4px;
+  background: #f5b400;
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* GRID */
+.services-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.service-card {
+  border: 2px solid #f5b400;
+  border-radius: 14px;
+  padding: 40px 30px;
+  text-align: center;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  transform: translateY(-6px);
+  border-color: #e6a800;
+}
+
+/* ACTIVE CARD (Middle One) */
+.service-card.active {
+  border: 2px solid #f5b400;
+  box-shadow: 0 10px 30px rgba(245, 180, 0, 0.15);
+}
+
+/* ICON */
+.service-card .icon {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+/* TITLE */
+.service-card h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+/* LIST */
+.service-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.service-card ul li {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.service-card ul li::before {
+  content: "✓";
+  color: #f5b400;
+  margin-right: 8px;
+}
+
+/* LINK */
+.learn-more {
+  text-decoration: none;
+  font-weight: 500;
+  color: #f5b400;
+}
+
+.learn-more:hover {
+  text-decoration: underline;
+}
+
+/* DETAILED SERVICES SECTION */
+.detailed-services {
+  max-width: 1200px;
+  margin: 80px auto 0;
+}
+
+.service-detail {
+  margin-bottom: 60px;
+  padding: 50px;
+  background: #f9f9f9;
+  border-radius: 14px;
+}
+
+.service-detail:nth-child(even) {
+  background: #f0f0f0;
+  border: 1px solid #e0e0e0;
+}
+
+.service-detail-content h3 {
+  font-size: 28px;
+  color: #222;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.service-detail-content h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: #f5b400;
+}
+
+.service-detail-content p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.service-detail-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.feature-item .check-icon {
+  color: #f5b400;
+  font-size: 18px;
+  margin-top: 2px;
+}
+
+.feature-item span {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* APPLICATIONS SECTION */
+.applications-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 60px 40px;
+  background: #f8f8f8;
+  border-radius: 14px;
+  color: #333;
+}
+
+.applications-section h3 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #222;
+}
+
+.applications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.application-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px solid #f5b400;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.application-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #f5b400 0%, #e6a800 100%);
+}
+
+.application-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-color: #e6a800;
+}
+
+.application-card h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #222;
+}
+
+.application-card .app-icon {
+  font-size: 24px;
+}
+
+.application-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.application-card ul li {
+  font-size: 14px;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+  color: #555;
+}
+
+.application-card ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #f5b400;
+}
+
+/* WHY CHOOSE US SECTION */
+.why-choose-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.why-choose-section h3 {
+  font-size: 32px;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.why-choose-section .underline {
+  margin-bottom: 50px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.benefit-card {
+  padding: 40px 30px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border-color: #f5b400;
+}
+
+.benefit-card .benefit-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.benefit-card h4 {
+  font-size: 20px;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.benefit-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* CTA SECTION */
+.cta-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 60px;
+  background: #222;
+  border-radius: 14px;
+  text-align: center;
+  color: #fff;
+}
+
+.cta-section h3 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.cta-section p {
+  font-size: 16px;
+  color: #ddd;
+  margin-bottom: 30px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 15px 35px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: #f5b400;
+  color: #222;
+}
+
+.btn-primary:hover {
+  background: #e6a800;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #f5b400;
+}
+
+.btn-secondary:hover {
+  background: #f5b400;
+  color: #222;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 28px;
+  }
+  
+  .service-detail {
+    padding: 30px;
+  }
+  
+  .service-detail-features {
+    grid-template-columns: 1fr;
+  }
+  
+  .applications-section {
+    padding: 40px 20px;
+  }
+  
+  .cta-section {
+    padding: 40px 20px;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+  }
+  
+  .btn-primary, .btn-secondary {
+    width: 100%;
+  }
+}

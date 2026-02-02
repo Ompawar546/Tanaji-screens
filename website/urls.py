@@ -7,6 +7,7 @@ urlpatterns = [
     path("contact/", views.contact, name="contact"),
     path("about/", views.about, name="about"),
     path("career/", views.career, name="career"),
+    path('services/', views.services, name='services'),
 
     # ================= PRODUCTS (PUBLIC) =================
     path("products/", views.products, name="products"),

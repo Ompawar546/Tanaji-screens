@@ -12,8 +12,21 @@ from .forms import ProductForm, ProductCategoryForm
 
 # ===================== PUBLIC STATIC PAGES =====================
 
+from .models import Product
+
 def home(request):
-    return render(request, 'website/home.html')
+    products = Product.objects.order_by('-id')[:4]  # latest 4 products
+    return render(request, 'website/home.html', {
+        'products': products
+    })
+
+
+from django.shortcuts import render
+
+def services(request):
+    return render(request, 'website/services.html')
+
+
 
 
 def contact(request):

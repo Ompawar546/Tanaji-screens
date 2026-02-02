@@ -139,6 +139,57 @@
 </div>
 
 
+<!-- FEATURED PRODUCTS (FROM DB) -->
+<section class="featured-products-section">
+
+  <div class="container">
+
+    <h2 class="featured-title">Our Products</h2>
+    <p class="featured-subtitle">
+      A selection of our latest precision-engineered products
+    </p>
+
+    <div class="featured-products-grid">
+
+      {% for product in products %}
+      <a href="{% url 'product_detail' product.slug %}" class="featured-product-card">
+
+        <div class="featured-product-image">
+          {% if product.image %}
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+          {% else %}
+            <img src="{% static 'website/images/no-image.png' %}" alt="No Image">
+          {% endif %}
+        </div>
+
+        <h4 class="featured-product-name">
+          {{ product.name }}
+        </h4>
+
+      </a>
+      {% empty %}
+        <p style="text-align:center;">No products added yet.</p>
+      {% endfor %}
+
+    </div>
+
+
+    <div class="featured-cta">
+      <a href="{% url 'products' %}" class="featured-btn">
+        View All Products →
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<div class="section-divider">
+    <div class="section-divider-icon"></div>
+</div>
+
+
 <!-- MILESTONES SECTION -->
 <section class="milestone-section">
 

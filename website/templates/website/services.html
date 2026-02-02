@@ -1,0 +1,440 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{% static 'website/css/services.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="services-section">
+
+  <div class="section-header">
+    <h2>Our Core Services</h2>
+    <span class="underline"></span>
+    <p>With over 20 years of expertise, we deliver high-quality screen printing, laser engraving, and specialized labeling solutions backed by ISO 9001:2015 certification and global-class quality assurance standards.</p>
+  </div>
+
+  <div class="services-grid">
+
+    <!-- Service 1 -->
+    <div class="service-card">
+      <div class="icon">🖨️</div>
+      <h3>Screen Printing</h3>
+      <ul>
+        <li>PCB Keypads</li>
+        <li>Flexible Keypads</li>
+        <li>Membrane Overlays</li>
+        <li>Custom Graphics</li>
+        <li>Industrial Applications</li>
+      </ul>
+      <a href="#screen-printing" class="learn-more">Learn More →</a>
+    </div>
+
+    <!-- Service 2 (Highlighted) -->
+    <div class="service-card active">
+      <div class="icon">⚡</div>
+      <h3>Laser Engraving</h3>
+      <ul>
+        <li>Precision Engraving</li>
+        <li>Metal Etching</li>
+        <li>Acrylic Work</li>
+        <li>Chemical Alteration</li>
+        <li>Custom Designs</li>
+      </ul>
+      <a href="#laser-engraving" class="learn-more">Learn More →</a>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="service-card">
+      <div class="icon">🏷️</div>
+      <h3>Specialized Labels</h3>
+      <ul>
+        <li>Traffolyte Labels</li>
+        <li>Industrial Stickers</li>
+        <li>3D Domed Labels</li>
+        <li>Illuminated Labels</li>
+        <li>Name Plates</li>
+      </ul>
+      <a href="#specialized-labels" class="learn-more">Learn More →</a>
+    </div>
+
+  </div>
+
+  <!-- DETAILED SERVICES -->
+  <div class="detailed-services">
+
+    <!-- Screen Printing Detail -->
+    <div class="service-detail" id="screen-printing">
+      <div class="service-detail-content">
+        <h3>Screen Printing Solutions</h3>
+        <p>Screen printing is the process of pressing ink through a stenciled mesh screen to create precise, durable printed designs. This versatile technique is utilized across multiple industries for creating high-quality membrane keypads, flexible circuits, and graphic overlays.</p>
+        <p>Our state-of-the-art manufacturing facility in Satara MIDC is equipped with avant-garde machinery that ensures perfect registration and excellent print definition for even the most complex designs.</p>
+        <div class="service-detail-features">
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Membrane PCB Keypads</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Flexible Keypads</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Membrane Overlays</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Graphic Overlays & Labels</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Automotive Dials</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Multi-color Printing (up to 12 colors)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Membrane Keypads & Flexible Circuits -->
+    <div class="service-detail">
+      <div class="service-detail-content">
+        <h3>Membrane Keypads & Flexible Circuits</h3>
+        <p>Membrane keypads are the most widely used form of switch technology today, offering exceptional reliability, long life, and design flexibility. We manufacture conductive rubber switches and keypads that look and feel like traditional push-button switches without their inherent disadvantages.</p>
+        <p>Our flexible printed circuits serve as connectors in applications where flexibility, space savings, or production constraints limit the use of rigid circuit boards. These circuits can bend, fold, and move freely, making them ideal for mobile communication, notebooks, computer peripherals, PDAs, digital cameras, aerospace, and military applications.</p>
+        <div class="service-detail-features">
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Long-lasting durability</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Cost-effective solutions</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Flex-rigid PCB options</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>High impedance FPC</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Custom engineering</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Superior performance</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Laser Engraving -->
+    <div class="service-detail" id="laser-engraving">
+      <div class="service-detail-content">
+        <h3>Laser Engraving & Marking</h3>
+        <p>Laser engraving is the practice of using lasers to engrave objects with exceptional precision. Our laser marking services encompass a broader category of methods including color change through chemical and molecular alteration, charring, foaming, melting, and ablation.</p>
+        <p>We offer customized cable tags in various sizes and thicknesses made from anodized aluminum and stainless steel, ensuring excellent performance even in extreme weather conditions. Our metal embossing services create stunning designs on metal sheets for decorative applications.</p>
+        <div class="service-detail-features">
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Precision laser cutting</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Metal & acrylic engraving</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Chemical alteration marking</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Custom cable tags</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Weather-resistant materials</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Decorative embossing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Graphic Overlays -->
+    <div class="service-detail">
+      <div class="service-detail-content">
+        <h3>Graphic Overlays</h3>
+        <p>The graphic overlay serves as the visible representation of a device's user interface panel. It functions as the topmost layer, either as a single adhesive-backed layer atop a membrane switch or to activate micro switches. We design overlays that are both functionally effective and visually striking.</p>
+        <p>Our custom graphic overlays provide an excellent canvas for high-resolution graphics, enabling companies to showcase their branding and logos while maintaining durability. We use polyester for applications requiring millions of actuations and solvent resistance, while polycarbonate offers crisp design for less demanding applications.</p>
+        <div class="service-detail-features">
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>High-resolution graphics</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Moisture protection</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Embossing options</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Backlighting capability</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Display windows</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Custom texturing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Industrial Labels & Stickers -->
+    <div class="service-detail" id="specialized-labels">
+      <div class="service-detail-content">
+        <h3>Industrial Labels & Stickers</h3>
+        <p>As a leading-edge supplier of custom industrial labels and stickers, we design solutions for harsh industrial and commercial environments. Our labels adhere to electronics, machinery, warehouse bins, barrels, floors, storage racks, and corrugated surfaces with exceptional longevity.</p>
+        <p>All industrial labels are customized to meet exacting specifications and come with a comprehensive range of features. We manufacture labels from paper, plastic film, cloth, metal, and other materials, printed with information and symbols critical for product identification and safety.</p>
+        <div class="service-detail-features">
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Harsh environment resistant</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Long durable lifespan</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Custom specifications</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Multiple material options</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Safety compliance</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Barcode integration</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Automotive Dials -->
+    <div class="service-detail">
+      <div class="service-detail-content">
+        <h3>Automotive Dials & Components</h3>
+        <p>The automotive industry relies on our screen printing expertise for both automotive dials and IMD/FIM part manufacturing. Our perfect registration and excellent print definition have made us a preferred supplier in the global marketplace.</p>
+        <p>Automotive dials can feature up to 12 colors in close tolerance, maintaining not only precise registration but also even color density throughout. Our robust high-tech squeegee system combines pneumatics, electronics, and hydraulics for unmatched quality and consistency.</p>
+        <div class="service-detail-features">
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Multi-color capability (12+ colors)</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Perfect registration accuracy</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Even color density</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>IMD/FIM manufacturing</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Close tolerance printing</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Global quality standards</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Specialty Labels -->
+    <div class="service-detail">
+      <div class="service-detail-content">
+        <h3>Specialty Label Solutions</h3>
+        <p>Our specialty labels include Traffolyte engraved labels, 3D domed labels, and illuminated labels designed for specific industrial and commercial applications. Each label type is engineered to meet unique requirements for visibility, durability, and functionality.</p>
+        <p>We manufacture etched labels in accordance with international standards for various industries, ensuring perfect finish and scratch resistance. These labels are ideal for displaying critical information and product advertising in demanding environments.</p>
+        <div class="service-detail-features">
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Traffolyte engraving</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>3D domed effects</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Illuminated options</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Scratch-resistant finish</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>International standards</span>
+          </div>
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span>Metal etching</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- APPLICATIONS SECTION -->
+  <div class="applications-section">
+    <h3>Industry Applications</h3>
+    <div class="applications-grid">
+      
+      <div class="application-card">
+        <h4><span class="app-icon">📱</span> Electronics</h4>
+        <ul>
+          <li>Mobile communication devices</li>
+          <li>Computer peripherals</li>
+          <li>PDAs & digital cameras</li>
+          <li>Consumer electronics</li>
+        </ul>
+      </div>
+
+      <div class="application-card">
+        <h4><span class="app-icon">🚗</span> Automotive</h4>
+        <ul>
+          <li>Dashboard instruments</li>
+          <li>Control panels</li>
+          <li>Automotive dials</li>
+          <li>Interior components</li>
+        </ul>
+      </div>
+
+      <div class="application-card">
+        <h4><span class="app-icon">🏭</span> Industrial</h4>
+        <ul>
+          <li>Machinery controls</li>
+          <li>Equipment labeling</li>
+          <li>Safety signage</li>
+          <li>Process indicators</li>
+        </ul>
+      </div>
+
+      <div class="application-card">
+        <h4><span class="app-icon">✈️</span> Aerospace & Military</h4>
+        <ul>
+          <li>Aircraft instrumentation</li>
+          <li>Military equipment</li>
+          <li>Control systems</li>
+          <li>Navigation panels</li>
+        </ul>
+      </div>
+
+      <div class="application-card">
+        <h4><span class="app-icon">🏥</span> Medical Devices</h4>
+        <ul>
+          <li>Medical equipment panels</li>
+          <li>Diagnostic devices</li>
+          <li>Healthcare labels</li>
+          <li>Sterile packaging</li>
+        </ul>
+      </div>
+
+      <div class="application-card">
+        <h4><span class="app-icon">📦</span> Packaging</h4>
+        <ul>
+          <li>Product labeling</li>
+          <li>Warehouse identification</li>
+          <li>Barcode systems</li>
+          <li>Shipping labels</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- WHY CHOOSE US -->
+  <div class="why-choose-section">
+    <h3>Why Choose Tanaji Screen?</h3>
+    <span class="underline"></span>
+
+    <div class="benefits-grid">
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">🏆</div>
+        <h4>20+ Years Experience</h4>
+        <p>Trusted leader in screen printing and laser engraving with over two decades of industry expertise serving customers from all segments.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">✅</div>
+        <h4>ISO 9001:2015 Certified</h4>
+        <p>Accredited with ISO 9001:2015 certification, ensuring global-class quality assurance standards in all our manufacturing processes.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">🔧</div>
+        <h4>State-of-the-Art Facility</h4>
+        <p>Modern manufacturing unit in Satara MIDC equipped with avant-garde machinery and supported by superior infrastructural facilities.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">🎯</div>
+        <h4>Customized Solutions</h4>
+        <p>From design to manufacturing to packaging, we provide end-to-end customized solutions tailored to your specific requirements.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">💡</div>
+        <h4>5S Culture & Quality Circle</h4>
+        <p>We've implemented 5S Culture and Quality Circle in our organization, continuously improving effectiveness and operational excellence.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">🚚</div>
+        <h4>Efficient Supply Chain</h4>
+        <p>Highly effective supply chain management ensures timely transportation and delivery of products to our clients across locations.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA SECTION -->
+  <div class="cta-section">
+    <h3>Ready to Get Started?</h3>
+    <p>Partner with us to optimize technology coupled with global-class quality assurance for your business needs.</p>
+    <div class="cta-buttons">
+      <a href="#contact" class="btn-primary">Request a Quote</a>
+      <a href="{% url 'products' %}" class="btn-secondary">View Our Work</a>
+    </div>
+  </div>
+
+</section>
+
+{% endblock %}
